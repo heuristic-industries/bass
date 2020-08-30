@@ -5,18 +5,278 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 3
 Title ""
-Date ""
-Rev ""
-Comp ""
+Date "2020-08-30"
+Rev "1"
+Comp "Heuristic Industries"
 Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 3400 3600 0    50   Input ~ 0
+Text HLabel 2600 3850 0    50   Input ~ 0
 in
-Text HLabel 4250 3600 2    50   Output ~ 0
+Text HLabel 7400 3600 2    50   Output ~ 0
 out
+$Comp
+L Amplifier_Operational:TL074 U102
+U 3 1 5F4C1858
+P 5350 3950
+F 0 "U102" H 5350 4317 50  0000 C CNN
+F 1 "TL074" H 5350 4226 50  0000 C CNN
+F 2 "" H 5300 4050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 5400 4150 50  0001 C CNN
+	3    5350 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV301
+U 1 1 5F4C3B6D
+P 5400 4900
+F 0 "RV301" V 5285 4900 50  0000 C CNN
+F 1 "b500k" V 5194 4900 50  0000 C CNN
+F 2 "" H 5400 4900 50  0001 C CNN
+F 3 "~" H 5400 4900 50  0001 C CNN
+	1    5400 4900
+	0    -1   -1   0   
+$EndComp
 Wire Wire Line
-	4250 3600 3400 3600
+	5050 4050 4950 4050
+Wire Wire Line
+	4950 4050 4950 4900
+Wire Wire Line
+	4950 4900 5100 4900
+Wire Wire Line
+	5400 4750 5100 4750
+Wire Wire Line
+	5100 4750 5100 4900
+Connection ~ 5100 4900
+Wire Wire Line
+	5100 4900 5250 4900
+Wire Wire Line
+	5550 4900 5800 4900
+Wire Wire Line
+	5800 4900 5800 3950
+Wire Wire Line
+	5800 3950 5650 3950
+$Comp
+L Diode:BAT46 D301
+U 1 1 5F4C5374
+P 5400 5450
+F 0 "D301" H 5400 5666 50  0000 C CNN
+F 1 "BAT46" H 5400 5575 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5400 5275 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/85662/bat46.pdf" H 5400 5450 50  0001 C CNN
+	1    5400 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:BAT46 D302
+U 1 1 5F4C5E7F
+P 5400 5800
+F 0 "D302" H 5400 5584 50  0000 C CNN
+F 1 "BAT46" H 5400 5675 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 5400 5625 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/85662/bat46.pdf" H 5400 5800 50  0001 C CNN
+	1    5400 5800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C303
+U 1 1 5F4C647B
+P 5400 6250
+F 0 "C303" V 5148 6250 50  0000 C CNN
+F 1 "47pF" V 5239 6250 50  0000 C CNN
+F 2 "" H 5438 6100 50  0001 C CNN
+F 3 "~" H 5400 6250 50  0001 C CNN
+	1    5400 6250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5250 6250 4950 6250
+Wire Wire Line
+	4950 6250 4950 5800
+Connection ~ 4950 4900
+Wire Wire Line
+	5550 6250 5800 6250
+Wire Wire Line
+	5800 6250 5800 5800
+Connection ~ 5800 4900
+Wire Wire Line
+	5550 5450 5800 5450
+Connection ~ 5800 5450
+Wire Wire Line
+	5800 5450 5800 4900
+Wire Wire Line
+	5250 5450 4950 5450
+Connection ~ 4950 5450
+Wire Wire Line
+	4950 5450 4950 4900
+Wire Wire Line
+	5250 5800 4950 5800
+Connection ~ 4950 5800
+Wire Wire Line
+	4950 5800 4950 5450
+Wire Wire Line
+	5550 5800 5800 5800
+Connection ~ 5800 5800
+Wire Wire Line
+	5800 5800 5800 5450
+$Comp
+L Device:R R301
+U 1 1 5F4C7B48
+P 3150 4100
+F 0 "R301" H 3220 4146 50  0000 L CNN
+F 1 "1M" H 3220 4055 50  0000 L CNN
+F 2 "" V 3080 4100 50  0001 C CNN
+F 3 "~" H 3150 4100 50  0001 C CNN
+	1    3150 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C302
+U 1 1 5F4C8048
+P 3900 3850
+F 0 "C302" V 3648 3850 50  0000 C CNN
+F 1 "10n" V 3739 3850 50  0000 C CNN
+F 2 "" H 3938 3700 50  0001 C CNN
+F 3 "~" H 3900 3850 50  0001 C CNN
+	1    3900 3850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C301
+U 1 1 5F4C8F02
+P 3500 4100
+F 0 "C301" H 3615 4146 50  0000 L CNN
+F 1 "1n" H 3615 4055 50  0000 L CNN
+F 2 "" H 3538 3950 50  0001 C CNN
+F 3 "~" H 3500 4100 50  0001 C CNN
+	1    3500 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R302
+U 1 1 5F4C94C1
+P 4450 3850
+F 0 "R302" V 4243 3850 50  0000 C CNN
+F 1 "10k" V 4334 3850 50  0000 C CNN
+F 2 "" V 4380 3850 50  0001 C CNN
+F 3 "~" H 4450 3850 50  0001 C CNN
+	1    4450 3850
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0301
+U 1 1 5F4C98B6
+P 3150 4350
+F 0 "#PWR0301" H 3150 4100 50  0001 C CNN
+F 1 "GND" H 3155 4177 50  0000 C CNN
+F 2 "" H 3150 4350 50  0001 C CNN
+F 3 "" H 3150 4350 50  0001 C CNN
+	1    3150 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0302
+U 1 1 5F4C99C2
+P 3500 4350
+F 0 "#PWR0302" H 3500 4100 50  0001 C CNN
+F 1 "GND" H 3505 4177 50  0000 C CNN
+F 2 "" H 3500 4350 50  0001 C CNN
+F 3 "" H 3500 4350 50  0001 C CNN
+	1    3500 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 4350 3500 4250
+Wire Wire Line
+	3150 4250 3150 4350
+Wire Wire Line
+	3750 3850 3500 3850
+Wire Wire Line
+	3500 3850 3500 3950
+Wire Wire Line
+	3500 3850 3150 3850
+Wire Wire Line
+	3150 3850 3150 3950
+Connection ~ 3500 3850
+Wire Wire Line
+	4050 3850 4300 3850
+Wire Wire Line
+	4600 3850 5050 3850
+Wire Wire Line
+	2600 3850 2850 3850
+Connection ~ 3150 3850
+$Comp
+L Device:C C304
+U 1 1 5F4CC7C1
+P 6450 5650
+F 0 "C304" H 6565 5696 50  0000 L CNN
+F 1 "50n" H 6565 5605 50  0000 L CNN
+F 2 "" H 6488 5500 50  0001 C CNN
+F 3 "~" H 6450 5650 50  0001 C CNN
+	1    6450 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0303
+U 1 1 5F4CCCEC
+P 6450 5900
+F 0 "#PWR0303" H 6450 5650 50  0001 C CNN
+F 1 "GND" H 6455 5727 50  0000 C CNN
+F 2 "" H 6450 5900 50  0001 C CNN
+F 3 "" H 6450 5900 50  0001 C CNN
+	1    6450 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 5900 6450 5800
+Wire Wire Line
+	6450 5500 6450 5350
+$Comp
+L Device:R R303
+U 1 1 5F4CC29F
+P 6450 5200
+F 0 "R303" H 6520 5246 50  0000 L CNN
+F 1 "1k" H 6520 5155 50  0000 L CNN
+F 2 "" V 6380 5200 50  0001 C CNN
+F 3 "~" H 6450 5200 50  0001 C CNN
+	1    6450 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 5050 6450 4900
+Wire Wire Line
+	6450 4900 5800 4900
+Connection ~ 5800 3950
+$Comp
+L Device:R_POT RV302
+U 1 1 5F4D4628
+P 6950 3600
+F 0 "RV302" H 6881 3646 50  0000 R CNN
+F 1 "b10k" H 6881 3555 50  0000 R CNN
+F 2 "" H 6950 3600 50  0001 C CNN
+F 3 "~" H 6950 3600 50  0001 C CNN
+	1    6950 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 3950 6950 3750
+Wire Wire Line
+	5800 3950 6950 3950
+Wire Wire Line
+	2850 3850 2850 3350
+Wire Wire Line
+	2850 3350 6950 3350
+Wire Wire Line
+	6950 3350 6950 3450
+Connection ~ 2850 3850
+Wire Wire Line
+	2850 3850 3150 3850
+Wire Wire Line
+	7100 3600 7400 3600
+Text Notes 6300 3800 0    50   ~ 0
+drive wet/dry
+Text Notes 5400 4650 0    50   ~ 0
+gain
 $EndSCHEMATC

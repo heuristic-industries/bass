@@ -4,10 +4,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 3
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "EQ section"
+Date "2020-08-30"
+Rev "1"
+Comp "Heuristic Industries"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -428,7 +428,7 @@ L Device:R_POT RV201
 U 1 1 5F5113FD
 P 7350 2450
 F 0 "RV201" V 7143 2450 50  0000 C CNN
-F 1 "R_POT" V 7234 2450 50  0000 C CNN
+F 1 "b1k" V 7234 2450 50  0000 C CNN
 F 2 "" H 7350 2450 50  0001 C CNN
 F 3 "~" H 7350 2450 50  0001 C CNN
 	1    7350 2450
@@ -448,7 +448,7 @@ L Device:R_POT RV202
 U 1 1 5F514408
 P 7400 4100
 F 0 "RV202" V 7193 4100 50  0000 C CNN
-F 1 "B1k" V 7284 4100 50  0000 C CNN
+F 1 "b1k" V 7284 4100 50  0000 C CNN
 F 2 "" H 7400 4100 50  0001 C CNN
 F 3 "~" H 7400 4100 50  0001 C CNN
 	1    7400 4100
@@ -510,4 +510,8 @@ Wire Wire Line
 Connection ~ 7550 4250
 Wire Wire Line
 	7550 4250 7800 4250
+Text Notes 7200 3750 0    50   ~ 0
+bass boost
+Text Notes 7150 2100 0    50   ~ 0
+treble boost
 $EndSCHEMATC

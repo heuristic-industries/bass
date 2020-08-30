@@ -271,32 +271,6 @@ F 3 "" H 1350 7500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R104
-U 1 1 5F4AB8C1
-P 6400 4050
-F 0 "R104" H 6470 4096 50  0000 L CNN
-F 1 "1M" H 6470 4005 50  0000 L CNN
-F 2 "" V 6330 4050 50  0001 C CNN
-F 3 "~" H 6400 4050 50  0001 C CNN
-	1    6400 4050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6400 3900 6400 3750
-Wire Wire Line
-	6400 3750 6250 3750
-$Comp
-L power:GND #PWR0105
-U 1 1 5F4ACAFF
-P 6400 4200
-F 0 "#PWR0105" H 6400 3950 50  0001 C CNN
-F 1 "GND" H 6405 4027 50  0000 C CNN
-F 2 "" H 6400 4200 50  0001 C CNN
-F 3 "" H 6400 4200 50  0001 C CNN
-	1    6400 4200
-	1    0    0    -1  
-$EndComp
-$Comp
 L Amplifier_Operational:TL074 U101
 U 1 1 5F4BF33F
 P 3250 3750
@@ -365,9 +339,6 @@ Wire Wire Line
 	4050 3750 3700 3750
 Connection ~ 3700 3750
 Wire Wire Line
-	6400 3750 6550 3750
-Connection ~ 6400 3750
-Wire Wire Line
 	1850 3650 1700 3650
 Wire Wire Line
 	1500 1250 1400 1250
@@ -377,7 +348,7 @@ Text Label 1500 1250 0    50   ~ 0
 input
 Text Label 1500 1800 0    50   ~ 0
 output
-Text Label 6550 3750 0    50   ~ 0
+Text Label 7300 4000 0    50   ~ 0
 output
 Text Label 1700 3650 2    50   ~ 0
 input
@@ -393,4 +364,36 @@ Wire Wire Line
 	5850 3750 5950 3750
 Wire Wire Line
 	4800 3750 5100 3750
+$Comp
+L Device:R_POT RV101
+U 1 1 5F4D1371
+P 6800 4000
+F 0 "RV101" H 6730 4046 50  0000 R CNN
+F 1 "a100k" H 6730 3955 50  0000 R CNN
+F 2 "" H 6800 4000 50  0001 C CNN
+F 3 "~" H 6800 4000 50  0001 C CNN
+	1    6800 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5F4D1C33
+P 6800 4300
+F 0 "#PWR0105" H 6800 4050 50  0001 C CNN
+F 1 "GND" H 6805 4127 50  0000 C CNN
+F 2 "" H 6800 4300 50  0001 C CNN
+F 3 "" H 6800 4300 50  0001 C CNN
+	1    6800 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 4300 6800 4150
+Wire Wire Line
+	6800 3850 6800 3750
+Wire Wire Line
+	6250 3750 6800 3750
+Wire Wire Line
+	6950 4000 7300 4000
+Text Notes 6400 4250 0    50   ~ 0
+volume
 $EndSCHEMATC
