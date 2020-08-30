@@ -1,0 +1,396 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 3
+Title "Bass Pro"
+Date "2020-08-30"
+Rev "1"
+Comp "Heuristic Industries"
+Comment1 "by Eric Wood"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:CP C101
+U 1 1 5F46CB7D
+P 2000 3650
+F 0 "C101" V 2255 3650 50  0000 C CNN
+F 1 "10uF" V 2164 3650 50  0000 C CNN
+F 2 "" H 2038 3500 50  0001 C CNN
+F 3 "~" H 2000 3650 50  0001 C CNN
+	1    2000 3650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Jack-DC J103
+U 1 1 5F46D0C4
+P 3050 1500
+F 0 "J103" H 3107 1825 50  0000 C CNN
+F 1 "Jack-DC" H 3107 1734 50  0000 C CNN
+F 2 "" H 3100 1460 50  0001 C CNN
+F 3 "~" H 3100 1460 50  0001 C CNN
+F 4 "J" H 3050 1500 50  0001 C CNN "Spice_Primitive"
+F 5 "Jack-DC" H 3050 1500 50  0001 C CNN "Spice_Model"
+F 6 "N" H 3050 1500 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3050 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N5817 D101
+U 1 1 5F46E2BB
+P 3700 1050
+F 0 "D101" H 3700 834 50  0000 C CNN
+F 1 "1N5817" H 3700 925 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 3700 875 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88525/1n5817.pdf" H 3700 1050 50  0001 C CNN
+F 4 "D" H 3700 1050 50  0001 C CNN "Spice_Primitive"
+F 5 "1N5817" H 3700 1050 50  0001 C CNN "Spice_Model"
+F 6 "N" H 3700 1050 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "/Users/ericwood/PCBs/models/1N5817.LIB" H 3700 1050 50  0001 C CNN "Spice_Lib_File"
+F 8 "2 1" H 3700 1050 50  0001 C CNN "Spice_Node_Sequence"
+	1    3700 1050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:CP C102
+U 1 1 5F46FDB7
+P 4150 1500
+F 0 "C102" H 4268 1546 50  0000 L CNN
+F 1 "100uF" H 4268 1455 50  0000 L CNN
+F 2 "" H 4188 1350 50  0001 C CNN
+F 3 "~" H 4150 1500 50  0001 C CNN
+	1    4150 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R102
+U 1 1 5F470A6C
+P 4750 1300
+F 0 "R102" H 4820 1346 50  0000 L CNN
+F 1 "10k" H 4820 1255 50  0000 L CNN
+F 2 "" V 4680 1300 50  0001 C CNN
+F 3 "~" H 4750 1300 50  0001 C CNN
+	1    4750 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R103
+U 1 1 5F47199C
+P 4750 1700
+F 0 "R103" H 4820 1746 50  0000 L CNN
+F 1 "10k" H 4820 1655 50  0000 L CNN
+F 2 "" V 4680 1700 50  0001 C CNN
+F 3 "~" H 4750 1700 50  0001 C CNN
+	1    4750 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 1450 4750 1500
+Wire Wire Line
+	4150 1650 4150 1950
+Wire Wire Line
+	4150 1950 4750 1950
+Wire Wire Line
+	4750 1950 4750 1850
+Wire Wire Line
+	4150 1350 4150 1050
+Wire Wire Line
+	4150 1050 4750 1050
+Wire Wire Line
+	4750 1050 4750 1150
+Wire Wire Line
+	3850 1050 4150 1050
+Connection ~ 4150 1050
+Wire Wire Line
+	3550 1050 3350 1050
+Wire Wire Line
+	3350 1050 3350 1400
+Wire Wire Line
+	3350 1600 3350 1950
+Wire Wire Line
+	3350 1950 4150 1950
+Connection ~ 4150 1950
+$Comp
+L power:GND #PWR0104
+U 1 1 5F475B5A
+P 4150 1950
+F 0 "#PWR0104" H 4150 1700 50  0001 C CNN
+F 1 "GND" H 4155 1777 50  0000 C CNN
+F 2 "" H 4150 1950 50  0001 C CNN
+F 3 "" H 4150 1950 50  0001 C CNN
+	1    4150 1950
+	1    0    0    -1  
+$EndComp
+Text GLabel 5100 1050 2    50   Input ~ 0
+9V
+Wire Wire Line
+	5100 1050 4750 1050
+Connection ~ 4750 1050
+Text GLabel 5100 1500 2    50   Input ~ 0
+4.5V
+Wire Wire Line
+	5100 1500 4750 1500
+Connection ~ 4750 1500
+Wire Wire Line
+	4750 1500 4750 1550
+$Comp
+L Connector:AudioJack2 J102
+U 1 1 5F4764A0
+P 1200 1250
+F 0 "J102" H 1232 1575 50  0000 C CNN
+F 1 "Input" H 1232 1484 50  0000 C CNN
+F 2 "" H 1200 1250 50  0001 C CNN
+F 3 "~" H 1200 1250 50  0001 C CNN
+F 4 "J" H 1200 1250 50  0001 C CNN "Spice_Primitive"
+F 5 "Input" H 1200 1250 50  0001 C CNN "Spice_Model"
+F 6 "N" H 1200 1250 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    1200 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:AudioJack2 J101
+U 1 1 5F476B4D
+P 1150 1800
+F 0 "J101" H 1182 2125 50  0000 C CNN
+F 1 "Output" H 1182 2034 50  0000 C CNN
+F 2 "" H 1150 1800 50  0001 C CNN
+F 3 "~" H 1150 1800 50  0001 C CNN
+F 4 "J" H 1150 1800 50  0001 C CNN "Spice_Primitive"
+F 5 "Output" H 1150 1800 50  0001 C CNN "Spice_Model"
+F 6 "N" H 1150 1800 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    1150 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5F47742A
+P 1600 950
+F 0 "#PWR0102" H 1600 700 50  0001 C CNN
+F 1 "GND" H 1605 777 50  0000 C CNN
+F 2 "" H 1600 950 50  0001 C CNN
+F 3 "" H 1600 950 50  0001 C CNN
+	1    1600 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5F47829B
+P 1600 1450
+F 0 "#PWR0103" H 1600 1200 50  0001 C CNN
+F 1 "GND" H 1605 1277 50  0000 C CNN
+F 2 "" H 1600 1450 50  0001 C CNN
+F 3 "" H 1600 1450 50  0001 C CNN
+	1    1600 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 1450 1350 1450
+Wire Wire Line
+	1350 1450 1350 1700
+Wire Wire Line
+	1400 1150 1400 950 
+Wire Wire Line
+	1400 950  1600 950 
+Wire Wire Line
+	2150 3650 2450 3650
+Connection ~ 2450 3650
+Wire Wire Line
+	2450 3650 2450 3500
+Wire Wire Line
+	2450 3650 2950 3650
+Wire Wire Line
+	2950 3850 2950 4100
+Wire Wire Line
+	2950 4100 3700 4100
+Wire Wire Line
+	3700 4100 3700 3750
+Wire Wire Line
+	3700 3750 3550 3750
+Text GLabel 2450 3200 1    50   Input ~ 0
+4.5V
+$Comp
+L Device:CP C103
+U 1 1 5F48EFDA
+P 6100 3750
+F 0 "C103" V 6355 3750 50  0000 C CNN
+F 1 "10uF" V 6264 3750 50  0000 C CNN
+F 2 "" H 6138 3600 50  0001 C CNN
+F 3 "~" H 6100 3750 50  0001 C CNN
+	1    6100 3750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5F4970DB
+P 6250 1700
+F 0 "#PWR0106" H 6250 1450 50  0001 C CNN
+F 1 "GND" H 6255 1527 50  0000 C CNN
+F 2 "" H 6250 1700 50  0001 C CNN
+F 3 "" H 6250 1700 50  0001 C CNN
+	1    6250 1700
+	1    0    0    -1  
+$EndComp
+Text GLabel 6250 1100 1    50   Input ~ 0
+9V
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5F498745
+P 1350 7050
+F 0 "#FLG0101" H 1350 7125 50  0001 C CNN
+F 1 "PWR_FLAG" H 1350 7223 50  0000 C CNN
+F 2 "" H 1350 7050 50  0001 C CNN
+F 3 "~" H 1350 7050 50  0001 C CNN
+	1    1350 7050
+	1    0    0    -1  
+$EndComp
+Text GLabel 1350 7050 3    50   Input ~ 0
+9V
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5F49B396
+P 1350 7500
+F 0 "#FLG0102" H 1350 7575 50  0001 C CNN
+F 1 "PWR_FLAG" H 1350 7673 50  0000 C CNN
+F 2 "" H 1350 7500 50  0001 C CNN
+F 3 "~" H 1350 7500 50  0001 C CNN
+	1    1350 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5F49BA17
+P 1350 7500
+F 0 "#PWR0101" H 1350 7250 50  0001 C CNN
+F 1 "GND" H 1355 7327 50  0000 C CNN
+F 2 "" H 1350 7500 50  0001 C CNN
+F 3 "" H 1350 7500 50  0001 C CNN
+	1    1350 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R104
+U 1 1 5F4AB8C1
+P 6400 4050
+F 0 "R104" H 6470 4096 50  0000 L CNN
+F 1 "1M" H 6470 4005 50  0000 L CNN
+F 2 "" V 6330 4050 50  0001 C CNN
+F 3 "~" H 6400 4050 50  0001 C CNN
+	1    6400 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 3900 6400 3750
+Wire Wire Line
+	6400 3750 6250 3750
+$Comp
+L power:GND #PWR0105
+U 1 1 5F4ACAFF
+P 6400 4200
+F 0 "#PWR0105" H 6400 3950 50  0001 C CNN
+F 1 "GND" H 6405 4027 50  0000 C CNN
+F 2 "" H 6400 4200 50  0001 C CNN
+F 3 "" H 6400 4200 50  0001 C CNN
+	1    6400 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U101
+U 1 1 5F4BF33F
+P 3250 3750
+F 0 "U101" H 3250 4117 50  0000 C CNN
+F 1 "TL074" H 3250 4026 50  0000 C CNN
+F 2 "" H 3200 3850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 3300 3950 50  0001 C CNN
+	1    3250 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U101
+U 5 1 5F4C9128
+P 6350 1400
+F 0 "U101" H 6308 1446 50  0000 L CNN
+F 1 "TL074" H 6308 1355 50  0000 L CNN
+F 2 "" H 6300 1500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6400 1600 50  0001 C CNN
+	5    6350 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TL074 U102
+U 5 1 5F4AEC84
+P 6800 1400
+F 0 "U102" H 6758 1446 50  0000 L CNN
+F 1 "TL074" H 6758 1355 50  0000 L CNN
+F 2 "" H 6750 1500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6850 1600 50  0001 C CNN
+	5    6800 1400
+	1    0    0    -1  
+$EndComp
+Text GLabel 6700 1100 1    50   Input ~ 0
+9V
+$Comp
+L power:GND #PWR0107
+U 1 1 5F4B0501
+P 6700 1700
+F 0 "#PWR0107" H 6700 1450 50  0001 C CNN
+F 1 "GND" H 6705 1527 50  0000 C CNN
+F 2 "" H 6700 1700 50  0001 C CNN
+F 3 "" H 6700 1700 50  0001 C CNN
+	1    6700 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R101
+U 1 1 5F495824
+P 2450 3350
+F 0 "R101" H 2520 3396 50  0000 L CNN
+F 1 "1M" H 2520 3305 50  0000 L CNN
+F 2 "" V 2380 3350 50  0001 C CNN
+F 3 "~" H 2450 3350 50  0001 C CNN
+	1    2450 3350
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 4050 3600 750  350 
+U 5F4E902B
+F0 "eq" 50
+F1 "eq.sch" 50
+F2 "in" I L 4050 3750 50 
+F3 "out" O R 4800 3750 50 
+$EndSheet
+Wire Wire Line
+	4050 3750 3700 3750
+Connection ~ 3700 3750
+Wire Wire Line
+	6400 3750 6550 3750
+Connection ~ 6400 3750
+Wire Wire Line
+	1850 3650 1700 3650
+Wire Wire Line
+	1500 1250 1400 1250
+Wire Wire Line
+	1500 1800 1350 1800
+Text Label 1500 1250 0    50   ~ 0
+input
+Text Label 1500 1800 0    50   ~ 0
+output
+Text Label 6550 3750 0    50   ~ 0
+output
+Text Label 1700 3650 2    50   ~ 0
+input
+$Sheet
+S 5100 3600 750  350 
+U 5F53980B
+F0 "dirt" 50
+F1 "dirt.sch" 50
+F2 "in" I L 5100 3750 50 
+F3 "out" O R 5850 3750 50 
+$EndSheet
+Wire Wire Line
+	5850 3750 5950 3750
+Wire Wire Line
+	4800 3750 5100 3750
+$EndSCHEMATC
